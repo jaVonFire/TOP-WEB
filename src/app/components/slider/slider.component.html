@@ -1,0 +1,27 @@
+<div *ngIf="imgs && imgs.length > 0" class="slider-container">
+  <img *ngFor="let image of imgs; let i = index"
+  [src]="image.imgSrc" [alt]="image.imgAlt"
+  [ngClass]="{'image-active': selectIndex === i}"
+  class="fade"
+  >
+  <div *ngIf="indicators" class="controls">
+    <span *ngFor="let balls of imgs; let i = index"
+    class="balls"
+    [ngClass]="{'active': selectIndex === i}"
+    (click)="selectImage(i)"
+    >
+  </span>
+</div>
+<button *ngIf="controls" class="btn-slider btn-prev"
+(click)="onPrevClick()">
+  <i class="fa fa-arrow-circle-left icon-slider icon-prev">
+</i>
+</button>
+
+<button *ngIf="controls" class="btn-slider btn-post"
+(click)="onPostClick()">
+  <i class="fa fa-arrow-circle-right icon-slider icon-post">
+</i>
+</button>
+</div>
+

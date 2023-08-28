@@ -1,0 +1,18 @@
+@font-face
+{
+  font-family: 'Spicy';
+  src: url('../../../assets/fonts/spicy-potatos/Spicy_Potatos.ttf')
+}
+
+h1 {
+  font-family: 'Spicy';
+  font-size: 5rem;
+  text-align: center;
+  margin: 1rem;
+}
+
+.slider-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
